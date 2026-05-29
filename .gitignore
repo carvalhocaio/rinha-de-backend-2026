@@ -1,10 +1,57 @@
-# Python-generated files
+# === Python ===
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
 build/
 dist/
+*.egg-info/
+*.egg
 wheels/
-*.egg-info
+.installed.cfg
 
-# Virtual environments
-.venv
+# === uv ===
+.venv/
+# uv.lock VAI pro repo (igual Cargo.lock) — reprodutibilidade da build.
+
+# === Testes e coverage ===
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache
+
+# === Linters / type checkers ===
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.dmypy.json
+
+# === Dataset da Rinha (não versionar — grande e fornecido por eles) ===
+/resources/references.json.gz
+/resources/index.npy
+/resources/labels.npy
+/resources/*.bin
+
+# === IDE ===
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Profiling / logs ===
+*.log
+flamegraph.svg
+perf.data
+perf.data.old
+*.prof
